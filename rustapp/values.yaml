@@ -2,7 +2,7 @@ replicaCount: 1
 image:
   repository: texplode/rusttaskctwo
   pullPolicy: IfNotPresent
-  tag: '9634312540'
+  tag: '9634443557'
 imagePullSecrets: []
 nameOverride: rustapp
 fullnameOverride: rustapp
@@ -20,7 +20,7 @@ service:
   port: 3500
 ingress:
   enabled: true
-  className: 'nginx'
+  className: nginx
   annotations: {}
   hosts:
     - host: rustdemo.t4cdigital.com
