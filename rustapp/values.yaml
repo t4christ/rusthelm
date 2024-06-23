@@ -20,7 +20,7 @@ service:
   port: 3500
 ingress:
   enabled: true
-  className: ''
+  className: 'nginx'
   annotations: {}
   hosts:
     - host: rustdemo.t4cdigital.com
