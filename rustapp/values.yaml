@@ -2,7 +2,7 @@ replicaCount: 1
 image:
   repository: texplode/rusttaskctwo
   pullPolicy: IfNotPresent
-  tag: -11353331156
+  tag: 9634230919
 imagePullSecrets: []
 nameOverride: rustapp
 fullnameOverride: rustapp
