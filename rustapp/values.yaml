@@ -31,11 +31,11 @@ ingress:
 resources: {}
 livenessProbe:
   httpGet:
-    path: /
+    path: /health
     port: http
 readinessProbe:
   httpGet:
-    path: /
+    path: /health
     port: http
 autoscaling:
   enabled: false
@@ -47,3 +47,14 @@ volumeMounts: []
 nodeSelector: {}
 tolerations: []
 affinity: {}
+
+
+
+
+1. Application built on rust - Devolopers build application
+2. Build a docker compose lab for testing rust app in containers - Devops picks up the app and ran it in containers locally
+3. Created pipeline to integrate rust app, test and build - Devops created a pipeline workflow with githubactions to test and build rust app with docker
+4. Created infrastructure (kubernetes and components) using terraform - Devops/SRE can create infrastructure with terrform but in this an SRE did
+5. Set up kubernetes installations (ingress, cloudflared, argocd and sonarqube) - Devops/SRE setup ingresses cloudflared argocd and sonarqube
+6. Integrated trivy for image vulnerability check and sonarqube for code quality test - Devops/SRE/Dev (Dev to access sonarqube to check for code quality report)
+7. Deployed rust app using a fully build pipeline - Devops have a full working pipeline
